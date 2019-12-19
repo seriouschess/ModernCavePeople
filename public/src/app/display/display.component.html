@@ -1,0 +1,23 @@
+<div class="container" class="bg-dark text-warning">
+    <div class="row">
+      <div class="col-sm">
+        <canvas #canvas width="600" height="300"></canvas>
+      </div>
+      <div  class="col-sm">
+        <div *ngFor="let Image of AllTheThings">
+            <p>Keyword: {{Image.keyword}} Image Id: {{Image._id}}</p>
+            <button class="btn btn-info" (click)="displayOneImage(Image._id)">Display</button>
+            <button class="btn btn-info" [routerLink]="['/edit', Image._id]">Edit</button>
+            <button class="btn btn-info" (click)="deleteImage(Image._id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>You can enter a keyword to refine your search</h2>
+  <form (submit)="displayGroupFromService()">
+    <label>Enter Keyword: </label><input name="keyword" [(ngModel)]="keyword">
+  </form>  
+
+<h2>You can also make a new Image.</h2> 
+<button class="btn btn-info" [routerLink]="['/image/new']" routerLinkActive="router-link-active" >Make a new Image!</button>

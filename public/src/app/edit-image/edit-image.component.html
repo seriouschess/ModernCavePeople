@@ -1,0 +1,51 @@
+ <div class="container bg-dark">
+    <div class="row">
+      <div class="col-sm">
+        <canvas 
+            (mousemove)="clientX = $event.clientX;clientY = $event.clientY;displayDrag($event)" 
+            (click)="drawItem($event)" 
+            #canvas width="600" height="300">
+        </canvas>
+      </div>
+      <div class="col-sm text-warning">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm center">
+                <h2>Select Mode:</h2>
+                <button class="btn btn-info" (click)="circleMode()">Circle Mode</button>
+                <button class="btn btn-info" (click)="lineMode()">Line Mode</button>
+                <button class="btn btn-info" (click)="pointMode()">Point Mode</button>
+              </div>
+              <div class="col-sm center">
+                  <h2>Undo :O</h2>
+                <button class="btn btn-info" (click)="undoLast()">Undo Last Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm center">
+                <p>Select Element Color:</p>
+                <p><button class="btn btn-info" (click)="changeColor('black')">Black</button>
+                <button class="btn btn-info" (click)="changeColor('yellow')">Yellow</button></p>
+                <p><button class="btn btn-info" (click)="changeColor('blue')">Blue</button>
+                <button class="btn btn-info" (click)="changeColor('red')">Red</button></p>
+                <p><button class="btn btn-info" (click)="changeColor('green')">Green</button></p>
+              </div>
+              <div class="col-sm">
+                <p>Information:</p>
+                <p>Click corresponding modes to access drawing tools. Click "Undo Last Action" to remove your last action from the drawing. Click "Update Image" when you are done and provide a keyword.</p>
+              </div>
+            </div>
+          </div>
+        <!-- <button class="btn btn-info" (click)="drawFromHistory($event)">Draw From History</button> -->
+      </div>
+    </div>
+  </div>
+
+<form (submit)="updateImageFromService()">
+    <label>Image Keyword(Change keyword if desired):</label><input type="text" name="keyword" [(ngModel)]="editedImage.keyword">
+    <input type="submit" value="Update Image" class="btn btn-info">
+</form>
+<h1 *ngIf="selected == true">click to complete shape</h1>
+<button class="btn btn-info" [routerLink]="['/display']">Go Back (no save)</button>
