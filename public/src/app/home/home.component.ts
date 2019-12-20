@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     this.image = {type: "image", keyword: "placeholder", image_elements: []}
     this.clientX = 0;
     this.clientY = 0;
-    this.mode = "point"; 
+    this.mode = "point";
     this.selected = false;
     this.selectedCoor = [];
     this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit {
   drawPoint(ev):void{
     this.ctx.beginPath();
     this.ctx.fillStyle = 'red';
-    this.ctx.arc(ev.clientX-35, ev.clientY, 3, 0, 2 * Math.PI); //not sure why we need an offset(-10,-81) but oh well
+    this.ctx.arc(ev.clientX-35, ev.clientY, 3, 0, 2 * Math.PI);
     this.ctx.stroke();
     this.drawHistory.push(
       {
@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
           circle_origin: [this.selectedCoor[0],this.selectedCoor[1]],
           circle_radius: radius
         });
-      this.drawFromHistory();  
+      this.drawFromHistory();
       this.selectedCoor = [];
     }else{
       this.selected = true;
@@ -143,7 +143,7 @@ export class HomeComponent implements OnInit {
           line_end:[ev.clientX-35, ev.clientY]
         });
         this.drawFromHistory();
-    }else{ 
+    }else{
       this.selected = true;
       this.selectedCoor = [ev.clientX-35, ev.clientY];
     }
@@ -178,7 +178,7 @@ export class HomeComponent implements OnInit {
   }
 
   drawFromHistory(): void {
-    var current_element:any; 
+    var current_element:any;
     for(var i=0;i<this.drawHistory.length; i++){
       current_element = this.drawHistory[i];
       this.setColorHex(current_element);

@@ -23,7 +23,7 @@ export class EditImageComponent implements OnInit {
   clientY:any;
   errors: any;
   //keyword: any;
-  
+
   constructor(private _httpService: HttpService,
     private _router: Router,
     private _route: ActivatedRoute) {}
@@ -37,7 +37,7 @@ export class EditImageComponent implements OnInit {
     this.clientX = 0;
     this.clientY = 0;
     this.mode = "point";
-    this.color = "black"; 
+    this.color = "black";
     this.selected = false;
     this.selectedCoor = [];
     this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
@@ -71,15 +71,15 @@ export class EditImageComponent implements OnInit {
     if (this.selected == true){
         if(this.mode == "circle"){
           this.ctx.clearRect(0, 0, 600, 300);
-          this.drawFromHistory(this.drawHistory);
+          this.drawFromHistory();
           this.setColorHex({color:this.color});
-          var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX-10, ev.clientY-81);
+          var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX-35, ev.clientY);
           this.ctx.beginPath();
           this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
           this.ctx.stroke();
         }else if(this.mode == "line"){
           this.ctx.clearRect(0, 0, 600, 300);
-          this.drawFromHistory(this.drawHistory);
+          this.drawFromHistory();
           this.setColorHex({color:this.color});
           this.ctx.beginPath();
           this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
@@ -104,6 +104,75 @@ export class EditImageComponent implements OnInit {
   lineMode(){
     this.selected = false;
     this.mode = "line";
+  }
+
+  drawItem(ev){
+    console.log(this.mode);
+    if(this.mode == "circle"){
+      this.drawCircle(ev);
+    }else if(this.mode == "line"){
+      this.drawLine(ev);
+    }else{ //default point
+      this.drawPoint(ev);
+    }
+  }
+
+  drawPoint(ev):void{
+    this.ctx.beginPath();
+    this.ctx.fillStyle = 'red';
+    this.ctx.arc(ev.clientX-35, ev.clientY, 3, 0, 2 * Math.PI);
+    this.ctx.stroke();
+    this.drawHistory.push(
+      {
+        type: "point",
+        color: this.color,
+        point_coordinate: [ev.clientX-35, ev.clientY]
+      });
+    this.drawFromHistory();
+  }
+
+  drawCircle(ev){
+    if(this.selected == true){
+      this.selected = false;
+      var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX-35, ev.clientY);
+      this.ctx.beginPath();
+      this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
+      this.ctx.stroke();
+      this.drawHistory.push( //circle object
+        {
+          type:"circle",
+          color: this.color,
+          circle_origin: [this.selectedCoor[0],this.selectedCoor[1]],
+          circle_radius: radius
+        });
+      this.drawFromHistory();
+      this.selectedCoor = [];
+    }else{
+      this.selected = true;
+      this.selectedCoor = [ev.clientX-35, ev.clientY];
+    }
+  }
+
+  drawLine(ev){
+    if(this.selected == true){
+      this.selected = false;
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
+      this.ctx.lineTo(ev.clientX-35, ev.clientY);
+      this.ctx.stroke();
+      this.drawHistory.push(
+        {
+          type:"line",
+          color:this.color,
+          line_begin:[this.selectedCoor[0], this.selectedCoor[1]],
+          line_end:[ev.clientX-35, ev.clientY]
+        });
+        this.drawFromHistory();
+    }else{
+      this.selected = true;
+      this.selectedCoor = [ev.clientX-35, ev.clientY];
+    }
+    this.ctx.beginPath();
   }
 
   changeColor(color){
@@ -133,79 +202,10 @@ export class EditImageComponent implements OnInit {
     }
   }
 
-  drawItem(ev){
-    if(this.mode == "circle"){
-      this.drawCircle(ev);
-    }else if(this.mode == "line"){
-      this.drawLine(ev);
-    }else{ //default point
-      this.drawPoint(ev);
-    }
-  }
-
-  drawPoint(ev):void{
-    this.ctx.beginPath();
-    this.ctx.fillStyle = 'red';
-    this.ctx.arc(ev.clientX, ev.clientY, 3, 0, 2 * Math.PI); 
-    this.ctx.stroke();
-    this.drawHistory.push(
-      {
-        type: "point",
-        color: this.color,
-        point_coordinate: [ev.clientX-35, ev.clientY]
-      });
-    this.drawFromHistory(this.drawHistory);
-  }
-
-  drawCircle(ev){
-    if(this.selected == true){
-      this.selected = false;
-      var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX-10, ev.clientY-81);
-      this.ctx.beginPath();
-      this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
-      this.ctx.stroke();
-      this.drawHistory.push( //circle object
-        {
-          type:"circle",
-          color: this.color,
-          circle_origin: [this.selectedCoor[0],this.selectedCoor[1]],
-          circle_radius: radius
-        });
-        this.drawFromHistory(this.drawHistory);
-      this.selectedCoor = [];
-    }else{
-      this.selected = true;
-      this.selectedCoor = [ev.clientX-10, ev.clientY-81];
-    }
-  }
-
-  drawLine(ev){
-    if(this.selected == true){
-      this.selected = false;
-      this.ctx.beginPath();
-      this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
-      this.ctx.lineTo(ev.clientX-10, ev.clientY-81);
-      this.ctx.stroke();
-      this.drawHistory.push(
-        {
-          type:"line",
-          color: this.color,
-          line_begin:[this.selectedCoor[0], this.selectedCoor[1]],
-          line_end:[ev.clientX-10, ev.clientY-81]
-        });
-      this.drawFromHistory(this.drawHistory);
-    }else{ 
-      this.selected = true;
-      this.selectedCoor = [ev.clientX-10, ev.clientY-81];
-    }
-    this.ctx.beginPath();
-  }
-
-  drawFromHistory(image_history:any): void {
-    this.ctx.clearRect(0, 0, 600, 300);
-    var current_element: any;
-    for(var i=0;i<image_history.length; i++){
-      current_element = image_history[i];
+  drawFromHistory(): void {
+    var current_element:any;
+    for(var i=0;i<this.drawHistory.length; i++){
+      current_element = this.drawHistory[i];
       this.setColorHex(current_element);
       if(current_element.type == "point"){
         this.ctx.beginPath();
@@ -213,7 +213,6 @@ export class EditImageComponent implements OnInit {
         this.ctx.fill();
         this.ctx.stroke();
       }else if(current_element.type == "line"){
-        //this.ctx.lineWidth=10;
         this.ctx.beginPath();
         this.ctx.moveTo(current_element.line_begin[0], current_element.line_begin[1]);
         this.ctx.lineTo(current_element.line_end[0], current_element.line_end[1]);
@@ -224,6 +223,12 @@ export class EditImageComponent implements OnInit {
         this.ctx.stroke();
       }
     }
+  }
+
+  undoLast(){
+    this.drawHistory.pop();
+    this.ctx.clearRect(0, 0, 600, 300);
+    this.drawFromHistory();
   }
 
   undoLast(){

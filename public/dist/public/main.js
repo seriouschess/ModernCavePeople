@@ -367,8 +367,8 @@ function __importDefault(mod) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _display_display_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./display/display.component */ "./src/app/display/display.component.ts");
 /* harmony import */ var _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page-not-found/page-not-found.component */ "./src/app/page-not-found/page-not-found.component.ts");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
@@ -382,7 +382,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const routes = [
+var routes = [
     { path: 'image/new', component: _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"] },
     { path: 'test', component: _inner_display_inner_display_component__WEBPACK_IMPORTED_MODULE_6__["InnerDisplayComponent"] },
     { path: 'display', component: _display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"] },
@@ -390,14 +390,17 @@ const routes = [
     { path: '', pathMatch: 'full', redirectTo: '/display' },
     { path: '**', component: _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_4__["PageNotFoundComponent"] }
 ];
-let AppRoutingModule = class AppRoutingModule {
-};
-AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
-    })
-], AppRoutingModule);
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
 
 
 
@@ -412,7 +415,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("*{\r\n    background-color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIip7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxufVxyXG4iXX0= */");
 
 /***/ }),
 
@@ -427,33 +430,34 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./http.service */ "./src/app/http.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
-let AppComponent = class AppComponent {
-    constructor(_httpService, _route, _router) {
+var AppComponent = /** @class */ (function () {
+    function AppComponent(_httpService, _route, _router) {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
     }
-    ngOnInit() { }
-};
-AppComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
-];
-AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-root',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")).default]
-    })
-], AppComponent);
+    AppComponent.prototype.ngOnInit = function () { };
+    AppComponent.ctorParameters = function () { return [
+        { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    ]; };
+    AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-root',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")).default]
+        })
+    ], AppComponent);
+    return AppComponent;
+}());
 
 
 
@@ -470,11 +474,11 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./http.service */ "./src/app/http.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _display_display_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./display/display.component */ "./src/app/display/display.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
@@ -499,30 +503,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let AppModule = class AppModule {
-};
-AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-            _display_display_component__WEBPACK_IMPORTED_MODULE_6__["DisplayComponent"],
-            _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_9__["PageNotFoundComponent"],
-            _home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
-            _new_image_new_image_component__WEBPACK_IMPORTED_MODULE_11__["NewImageComponent"],
-            _edit_image_edit_image_component__WEBPACK_IMPORTED_MODULE_12__["EditImageComponent"],
-            _display_all_display_all_component__WEBPACK_IMPORTED_MODULE_13__["DisplayAllComponent"],
-            _inner_display_inner_display_component__WEBPACK_IMPORTED_MODULE_14__["InnerDisplayComponent"]
-        ],
-        imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"]
-        ],
-        providers: [_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
-    })
-], AppModule);
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            declarations: [
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+                _display_display_component__WEBPACK_IMPORTED_MODULE_6__["DisplayComponent"],
+                _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_9__["PageNotFoundComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
+                _new_image_new_image_component__WEBPACK_IMPORTED_MODULE_11__["NewImageComponent"],
+                _edit_image_edit_image_component__WEBPACK_IMPORTED_MODULE_12__["EditImageComponent"],
+                _display_all_display_all_component__WEBPACK_IMPORTED_MODULE_13__["DisplayAllComponent"],
+                _inner_display_inner_display_component__WEBPACK_IMPORTED_MODULE_14__["InnerDisplayComponent"]
+            ],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"]
+            ],
+            providers: [_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
 
 
 
@@ -552,21 +559,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DisplayAllComponent", function() { return DisplayAllComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-let DisplayAllComponent = class DisplayAllComponent {
-    constructor() { }
-    ngOnInit() {
+var DisplayAllComponent = /** @class */ (function () {
+    function DisplayAllComponent() {
     }
-};
-DisplayAllComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-display-all',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./display-all.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/display-all/display-all.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./display-all.component.css */ "./src/app/display-all/display-all.component.css")).default]
-    })
-], DisplayAllComponent);
+    DisplayAllComponent.prototype.ngOnInit = function () {
+    };
+    DisplayAllComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-display-all',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./display-all.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/display-all/display-all.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./display-all.component.css */ "./src/app/display-all/display-all.component.css")).default]
+        })
+    ], DisplayAllComponent);
+    return DisplayAllComponent;
+}());
 
 
 
@@ -596,22 +605,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DisplayComponent", function() { return DisplayComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! .././http.service */ "./src/app/http.service.ts");
 
 
 
-let DisplayComponent = class DisplayComponent {
-    constructor(_httpService) {
+var DisplayComponent = /** @class */ (function () {
+    function DisplayComponent(_httpService) {
         this._httpService = _httpService;
     }
-    ngOnInit() {
+    DisplayComponent.prototype.ngOnInit = function () {
         this.ctx = this.canvas.nativeElement.getContext('2d');
         this.image = { type: "image", keyword: "placeholder", image_elements: [] };
         this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
         this.keyword = '';
         this.displayAllImages();
-    }
+    };
     // ngAfterViewInit(){
     //     //console.log(this.canvas_childrens._results)
     //     this.canvas_childrens.forEach(child => console.log(child));
@@ -621,7 +630,7 @@ let DisplayComponent = class DisplayComponent {
     //       console.log("hi");
     //       })
     // }
-    setColorHex(element) {
+    DisplayComponent.prototype.setColorHex = function (element) {
         //if(element.color=="black"){
         this.ctx.strokeStyle = '#000000';
         this.ctx.fillStyle = '#000000';
@@ -642,8 +651,8 @@ let DisplayComponent = class DisplayComponent {
             this.ctx.strokeStyle = "#00ff00";
             this.ctx.fillStyle = "#00ff00";
         }
-    }
-    drawFromHistory(image_history) {
+    };
+    DisplayComponent.prototype.drawFromHistory = function (image_history) {
         this.ctx.clearRect(0, 0, 600, 300);
         var current_element;
         for (var i = 0; i < image_history.length; i++) {
@@ -667,78 +676,83 @@ let DisplayComponent = class DisplayComponent {
                 this.ctx.stroke();
             }
         }
-    }
-    displayAllImages() {
+    };
+    DisplayComponent.prototype.displayAllImages = function () {
+        var _this = this;
         this.errors = false;
-        this._httpService.getImages().subscribe(data => {
+        this._httpService.getImages().subscribe(function (data) {
             if (data["results"]) {
                 console.log(data["results"]);
-                this.AllTheThings = data["results"];
+                _this.AllTheThings = data["results"];
             }
             else if (data['errors']) {
                 for (var key in data['errors']) {
-                    this.errors.push(data['errors'][key]['message']);
+                    _this.errors.push(data['errors'][key]['message']);
                 }
             }
         });
-    }
-    displayGroupFromService() {
+    };
+    DisplayComponent.prototype.displayGroupFromService = function () {
+        var _this = this;
         if (this.keyword == "") {
             this.displayAllImages();
         }
         else {
-            this._httpService.getImagesByKeyword(this.keyword).subscribe(data => {
+            this._httpService.getImagesByKeyword(this.keyword).subscribe(function (data) {
                 if (data["results"]) {
-                    this.AllTheThings = data["results"];
+                    _this.AllTheThings = data["results"];
                 }
                 else if (data['errors']) {
                     for (var key in data['errors']) {
-                        this.errors.push(data['errors'][key]['message']);
+                        _this.errors.push(data['errors'][key]['message']);
                     }
                 }
             });
         }
-    }
-    displayOneImage(some_id) {
-        this._httpService.getImage(some_id).subscribe(data => {
+    };
+    DisplayComponent.prototype.displayOneImage = function (some_id) {
+        var _this = this;
+        this._httpService.getImage(some_id).subscribe(function (data) {
             if (data["results"]) {
-                this.displayedImage = data["results"];
-                this.drawFromHistory(this.displayedImage.image_elements);
+                _this.displayedImage = data["results"];
+                _this.drawFromHistory(_this.displayedImage.image_elements);
             }
             else if (data['errors']) {
                 for (var key in data['errors']) {
-                    this.errors.push(data['errors'][key]['message']);
+                    _this.errors.push(data['errors'][key]['message']);
                 }
             }
         });
-    }
-    deleteImage(id) {
-        this._httpService.deleteImage(id).subscribe(data => {
+    };
+    DisplayComponent.prototype.deleteImage = function (id) {
+        var _this = this;
+        this._httpService.deleteImage(id).subscribe(function (data) {
             if (data) {
                 console.log(data);
             }
             else if (data['errors']) {
                 for (var key in data['errors']) {
-                    this.errors.push(data['errors'][key]['message']);
+                    _this.errors.push(data['errors'][key]['message']);
                 }
             }
-            this.displayAllImages();
+            _this.displayAllImages();
         });
-    }
-};
-DisplayComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
-], DisplayComponent.prototype, "canvas", void 0);
-DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-display',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/display/display.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./display.component.css */ "./src/app/display/display.component.css")).default]
-    })
-], DisplayComponent);
+    };
+    DisplayComponent.ctorParameters = function () { return [
+        { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
+    ], DisplayComponent.prototype, "canvas", void 0);
+    DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-display',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/display/display.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./display.component.css */ "./src/app/display/display.component.css")).default]
+        })
+    ], DisplayComponent);
+    return DisplayComponent;
+}());
 
 
 
@@ -768,22 +782,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditImageComponent", function() { return EditImageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
-let EditImageComponent = class EditImageComponent {
+var EditImageComponent = /** @class */ (function () {
     //keyword: any;
-    constructor(_httpService, _router, _route) {
+    function EditImageComponent(_httpService, _router, _route) {
         this._httpService = _httpService;
         this._router = _router;
         this._route = _route;
     }
     //ctx.fillRect(x, y, width, height);
-    ngOnInit() {
+    EditImageComponent.prototype.ngOnInit = function () {
+        var _this = this;
         //this.keyword = "placeholder";
         this.ctx = this.canvas.nativeElement.getContext('2d');
         //this.editedImage = {type: "image", keyword: "placeholder", image_elements: []}
@@ -795,43 +810,44 @@ let EditImageComponent = class EditImageComponent {
         this.selectedCoor = [];
         this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
         this.editedImage = {}; //placeholder
-        this._route.params.subscribe((params) => {
-            this.getOneImage(params['id']);
+        this._route.params.subscribe(function (params) {
+            _this.getOneImage(params['id']);
         });
-    }
-    getOneImage(some_id) {
-        this._httpService.getImage(some_id).subscribe(data => {
+    };
+    EditImageComponent.prototype.getOneImage = function (some_id) {
+        var _this = this;
+        this._httpService.getImage(some_id).subscribe(function (data) {
             if (data["results"]) {
                 console.log(data["results"]);
-                this.editedImage = data["results"];
+                _this.editedImage = data["results"];
                 //this.keyword = data["results"].keyword;
-                this.drawHistory = this.editedImage.image_elements;
-                this.drawFromHistory(this.drawHistory);
+                _this.drawHistory = _this.editedImage.image_elements;
+                _this.drawFromHistory(_this.drawHistory);
             }
             else if (data['errors']) {
                 for (var key in data['errors']) {
-                    this.errors.push(data['errors'][key]['message']);
+                    _this.errors.push(data['errors'][key]['message']);
                 }
             }
         });
-    }
-    distanceFormula(x1, y1, x2, y2) {
+    };
+    EditImageComponent.prototype.distanceFormula = function (x1, y1, x2, y2) {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
-    displayDrag(ev) {
+    };
+    EditImageComponent.prototype.displayDrag = function (ev) {
         if (this.selected == true) {
             if (this.mode == "circle") {
                 this.ctx.clearRect(0, 0, 600, 300);
-                this.drawFromHistory(this.drawHistory);
+                this.drawFromHistory();
                 this.setColorHex({ color: this.color });
-                var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 10, ev.clientY - 81);
+                var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 35, ev.clientY);
                 this.ctx.beginPath();
                 this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
                 this.ctx.stroke();
             }
             else if (this.mode == "line") {
                 this.ctx.clearRect(0, 0, 600, 300);
-                this.drawFromHistory(this.drawHistory);
+                this.drawFromHistory();
                 this.setColorHex({ color: this.color });
                 this.ctx.beginPath();
                 this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
@@ -842,23 +858,90 @@ let EditImageComponent = class EditImageComponent {
                 //do nothing to draw point.
             }
         }
-    }
-    pointMode() {
+    };
+    EditImageComponent.prototype.pointMode = function () {
         this.selected = false;
         this.mode = "point";
-    }
-    circleMode() {
+    };
+    EditImageComponent.prototype.circleMode = function () {
         this.selected = false;
         this.mode = "circle";
-    }
-    lineMode() {
+    };
+    EditImageComponent.prototype.lineMode = function () {
         this.selected = false;
         this.mode = "line";
-    }
-    changeColor(color) {
+    };
+    EditImageComponent.prototype.drawItem = function (ev) {
+        console.log(this.mode);
+        if (this.mode == "circle") {
+            this.drawCircle(ev);
+        }
+        else if (this.mode == "line") {
+            this.drawLine(ev);
+        }
+        else { //default point
+            this.drawPoint(ev);
+        }
+    };
+    EditImageComponent.prototype.drawPoint = function (ev) {
+        this.ctx.beginPath();
+        this.ctx.fillStyle = 'red';
+        this.ctx.arc(ev.clientX - 35, ev.clientY, 3, 0, 2 * Math.PI);
+        this.ctx.stroke();
+        this.drawHistory.push({
+            type: "point",
+            color: this.color,
+            point_coordinate: [ev.clientX - 35, ev.clientY]
+        });
+        this.drawFromHistory();
+    };
+    EditImageComponent.prototype.drawCircle = function (ev) {
+        if (this.selected == true) {
+            this.selected = false;
+            var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 35, ev.clientY);
+            this.ctx.beginPath();
+            this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
+            this.ctx.stroke();
+            this.drawHistory.push(//circle object
+            {
+                type: "circle",
+                color: this.color,
+                circle_origin: [this.selectedCoor[0], this.selectedCoor[1]],
+                circle_radius: radius
+            });
+            this.drawFromHistory();
+            this.selectedCoor = [];
+        }
+        else {
+            this.selected = true;
+            this.selectedCoor = [ev.clientX - 35, ev.clientY];
+        }
+    };
+    EditImageComponent.prototype.drawLine = function (ev) {
+        if (this.selected == true) {
+            this.selected = false;
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
+            this.ctx.lineTo(ev.clientX - 35, ev.clientY);
+            this.ctx.stroke();
+            this.drawHistory.push({
+                type: "line",
+                color: this.color,
+                line_begin: [this.selectedCoor[0], this.selectedCoor[1]],
+                line_end: [ev.clientX - 35, ev.clientY]
+            });
+            this.drawFromHistory();
+        }
+        else {
+            this.selected = true;
+            this.selectedCoor = [ev.clientX - 35, ev.clientY];
+        }
+        this.ctx.beginPath();
+    };
+    EditImageComponent.prototype.changeColor = function (color) {
         this.color = color;
-    }
-    setColorHex(element) {
+    };
+    EditImageComponent.prototype.setColorHex = function (element) {
         //if(element.color=="black"){
         this.ctx.strokeStyle = '#000000';
         this.ctx.fillStyle = '#000000';
@@ -879,78 +962,11 @@ let EditImageComponent = class EditImageComponent {
             this.ctx.strokeStyle = "#00ff00";
             this.ctx.fillStyle = "#00ff00";
         }
-    }
-    drawItem(ev) {
-        if (this.mode == "circle") {
-            this.drawCircle(ev);
-        }
-        else if (this.mode == "line") {
-            this.drawLine(ev);
-        }
-        else { //default point
-            this.drawPoint(ev);
-        }
-    }
-    drawPoint(ev) {
-        this.ctx.beginPath();
-        this.ctx.fillStyle = 'red';
-        this.ctx.arc(ev.clientX, ev.clientY, 3, 0, 2 * Math.PI);
-        this.ctx.stroke();
-        this.drawHistory.push({
-            type: "point",
-            color: this.color,
-            point_coordinate: [ev.clientX - 35, ev.clientY]
-        });
-        this.drawFromHistory(this.drawHistory);
-    }
-    drawCircle(ev) {
-        if (this.selected == true) {
-            this.selected = false;
-            var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 10, ev.clientY - 81);
-            this.ctx.beginPath();
-            this.ctx.arc(this.selectedCoor[0], this.selectedCoor[1], radius, 0, 2 * Math.PI);
-            this.ctx.stroke();
-            this.drawHistory.push(//circle object
-            {
-                type: "circle",
-                color: this.color,
-                circle_origin: [this.selectedCoor[0], this.selectedCoor[1]],
-                circle_radius: radius
-            });
-            this.drawFromHistory(this.drawHistory);
-            this.selectedCoor = [];
-        }
-        else {
-            this.selected = true;
-            this.selectedCoor = [ev.clientX - 10, ev.clientY - 81];
-        }
-    }
-    drawLine(ev) {
-        if (this.selected == true) {
-            this.selected = false;
-            this.ctx.beginPath();
-            this.ctx.moveTo(this.selectedCoor[0], this.selectedCoor[1]);
-            this.ctx.lineTo(ev.clientX - 10, ev.clientY - 81);
-            this.ctx.stroke();
-            this.drawHistory.push({
-                type: "line",
-                color: this.color,
-                line_begin: [this.selectedCoor[0], this.selectedCoor[1]],
-                line_end: [ev.clientX - 10, ev.clientY - 81]
-            });
-            this.drawFromHistory(this.drawHistory);
-        }
-        else {
-            this.selected = true;
-            this.selectedCoor = [ev.clientX - 10, ev.clientY - 81];
-        }
-        this.ctx.beginPath();
-    }
-    drawFromHistory(image_history) {
-        this.ctx.clearRect(0, 0, 600, 300);
+    };
+    EditImageComponent.prototype.drawFromHistory = function () {
         var current_element;
-        for (var i = 0; i < image_history.length; i++) {
-            current_element = image_history[i];
+        for (var i = 0; i < this.drawHistory.length; i++) {
+            current_element = this.drawHistory[i];
             this.setColorHex(current_element);
             if (current_element.type == "point") {
                 this.ctx.beginPath();
@@ -959,7 +975,6 @@ let EditImageComponent = class EditImageComponent {
                 this.ctx.stroke();
             }
             else if (current_element.type == "line") {
-                //this.ctx.lineWidth=10;
                 this.ctx.beginPath();
                 this.ctx.moveTo(current_element.line_begin[0], current_element.line_begin[1]);
                 this.ctx.lineTo(current_element.line_end[0], current_element.line_end[1]);
@@ -971,40 +986,47 @@ let EditImageComponent = class EditImageComponent {
                 this.ctx.stroke();
             }
         }
-    }
-    undoLast() {
+    };
+    EditImageComponent.prototype.undoLast = function () {
+        this.drawHistory.pop();
+        this.ctx.clearRect(0, 0, 600, 300);
+        this.drawFromHistory();
+    };
+    EditImageComponent.prototype.undoLast = function () {
         this.drawHistory.pop();
         this.ctx.clearRect(0, 0, 600, 300);
         this.drawFromHistory(this.drawHistory);
-    }
-    updateImageFromService() {
+    };
+    EditImageComponent.prototype.updateImageFromService = function () {
+        var _this = this;
         this.editedImage.image_elements = this.drawHistory;
         //this.editedImage.keyword = this.keyword;
         console.log(this.editedImage.keyword);
-        this._httpService.updateImage(this.editedImage).subscribe(data => {
+        this._httpService.updateImage(this.editedImage).subscribe(function (data) {
             console.log(data);
-            this.goToDisplay();
+            _this.goToDisplay();
         });
-    }
-    goToDisplay() {
+    };
+    EditImageComponent.prototype.goToDisplay = function () {
         this._router.navigate(['/display']);
-    }
-};
-EditImageComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
-], EditImageComponent.prototype, "canvas", void 0);
-EditImageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-edit',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./edit-image.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-image/edit-image.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./edit-image.component.css */ "./src/app/edit-image/edit-image.component.css")).default]
-    })
-], EditImageComponent);
+    };
+    EditImageComponent.ctorParameters = function () { return [
+        { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
+    ], EditImageComponent.prototype, "canvas", void 0);
+    EditImageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-edit',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./edit-image.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-image/edit-image.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./edit-image.component.css */ "./src/app/edit-image/edit-image.component.css")).default]
+        })
+    ], EditImageComponent);
+    return EditImageComponent;
+}());
 
 
 
@@ -1034,20 +1056,20 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
-let HomeComponent = class HomeComponent {
-    constructor(_httpService, _router) {
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent(_httpService, _router) {
         this._httpService = _httpService;
         this._router = _router;
     }
     //ctx.fillRect(x, y, width, height);
-    ngOnInit() {
+    HomeComponent.prototype.ngOnInit = function () {
         this.ctx = this.canvas.nativeElement.getContext('2d');
         this.image = { type: "image", keyword: "placeholder", image_elements: [] };
         this.clientX = 0;
@@ -1058,11 +1080,11 @@ let HomeComponent = class HomeComponent {
         this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
         //element
         //{}
-    }
-    distanceFormula(x1, y1, x2, y2) {
+    };
+    HomeComponent.prototype.distanceFormula = function (x1, y1, x2, y2) {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
-    displayDrag(ev) {
+    };
+    HomeComponent.prototype.displayDrag = function (ev) {
         if (this.selected == true) {
             if (this.mode == "circle") {
                 this.ctx.clearRect(0, 0, 600, 300);
@@ -1086,20 +1108,20 @@ let HomeComponent = class HomeComponent {
                 //do nothing to draw point.
             }
         }
-    }
-    pointMode() {
+    };
+    HomeComponent.prototype.pointMode = function () {
         this.selected = false;
         this.mode = "point";
-    }
-    circleMode() {
+    };
+    HomeComponent.prototype.circleMode = function () {
         this.selected = false;
         this.mode = "circle";
-    }
-    lineMode() {
+    };
+    HomeComponent.prototype.lineMode = function () {
         this.selected = false;
         this.mode = "line";
-    }
-    drawItem(ev) {
+    };
+    HomeComponent.prototype.drawItem = function (ev) {
         console.log(this.mode);
         if (this.mode == "circle") {
             this.drawCircle(ev);
@@ -1110,11 +1132,11 @@ let HomeComponent = class HomeComponent {
         else { //default point
             this.drawPoint(ev);
         }
-    }
-    drawPoint(ev) {
+    };
+    HomeComponent.prototype.drawPoint = function (ev) {
         this.ctx.beginPath();
         this.ctx.fillStyle = 'red';
-        this.ctx.arc(ev.clientX - 35, ev.clientY, 3, 0, 2 * Math.PI); //not sure why we need an offset(-10,-81) but oh well
+        this.ctx.arc(ev.clientX - 35, ev.clientY, 3, 0, 2 * Math.PI);
         this.ctx.stroke();
         this.drawHistory.push({
             type: "point",
@@ -1122,8 +1144,8 @@ let HomeComponent = class HomeComponent {
             point_coordinate: [ev.clientX - 35, ev.clientY]
         });
         this.drawFromHistory();
-    }
-    drawCircle(ev) {
+    };
+    HomeComponent.prototype.drawCircle = function (ev) {
         if (this.selected == true) {
             this.selected = false;
             var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 35, ev.clientY);
@@ -1144,8 +1166,8 @@ let HomeComponent = class HomeComponent {
             this.selected = true;
             this.selectedCoor = [ev.clientX - 35, ev.clientY];
         }
-    }
-    drawLine(ev) {
+    };
+    HomeComponent.prototype.drawLine = function (ev) {
         if (this.selected == true) {
             this.selected = false;
             this.ctx.beginPath();
@@ -1165,11 +1187,11 @@ let HomeComponent = class HomeComponent {
             this.selectedCoor = [ev.clientX - 35, ev.clientY];
         }
         this.ctx.beginPath();
-    }
-    changeColor(color) {
+    };
+    HomeComponent.prototype.changeColor = function (color) {
         this.color = color;
-    }
-    setColorHex(element) {
+    };
+    HomeComponent.prototype.setColorHex = function (element) {
         //if(element.color=="black"){
         this.ctx.strokeStyle = '#000000';
         this.ctx.fillStyle = '#000000';
@@ -1190,8 +1212,8 @@ let HomeComponent = class HomeComponent {
             this.ctx.strokeStyle = "#00ff00";
             this.ctx.fillStyle = "#00ff00";
         }
-    }
-    drawFromHistory() {
+    };
+    HomeComponent.prototype.drawFromHistory = function () {
         var current_element;
         for (var i = 0; i < this.drawHistory.length; i++) {
             current_element = this.drawHistory[i];
@@ -1214,35 +1236,37 @@ let HomeComponent = class HomeComponent {
                 this.ctx.stroke();
             }
         }
-    }
-    undoLast() {
+    };
+    HomeComponent.prototype.undoLast = function () {
         this.drawHistory.pop();
         this.ctx.clearRect(0, 0, 600, 300);
         this.drawFromHistory();
-    }
-    saveImage() {
+    };
+    HomeComponent.prototype.saveImage = function () {
+        var _this = this;
         this.image.image_elements = this.drawHistory;
         console.log(this.image);
-        this._httpService.postNewImage(this.image).subscribe(data => {
+        this._httpService.postNewImage(this.image).subscribe(function (data) {
             console.log(data);
-            this._router.navigate(['/']);
+            _this._router.navigate(['/']);
         });
-    }
-};
-HomeComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
-], HomeComponent.prototype, "canvas", void 0);
-HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-home',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")).default]
-    })
-], HomeComponent);
+    };
+    HomeComponent.ctorParameters = function () { return [
+        { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
+    ], HomeComponent.prototype, "canvas", void 0);
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-home',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")).default]
+        })
+    ], HomeComponent);
+    return HomeComponent;
+}());
 
 
 
@@ -1259,43 +1283,44 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpService", function() { return HttpService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
-let HttpService = class HttpService {
-    constructor(_http) {
+var HttpService = /** @class */ (function () {
+    function HttpService(_http) {
         this._http = _http;
         this.getImages();
     }
-    getImages() {
+    HttpService.prototype.getImages = function () {
         return this._http.get('/api');
-    }
-    getImagesByKeyword(keyword) {
-        return this._http.get(`/api/get_keyword/${keyword}`);
-    }
-    getImage(id) {
-        return this._http.get(`api/${id}`);
-    }
-    deleteImage(id) {
-        return this._http.get(`api/remove/${id}`);
-    }
-    postNewImage(new_Image) {
+    };
+    HttpService.prototype.getImagesByKeyword = function (keyword) {
+        return this._http.get("/api/get_keyword/" + keyword);
+    };
+    HttpService.prototype.getImage = function (id) {
+        return this._http.get("api/" + id);
+    };
+    HttpService.prototype.deleteImage = function (id) {
+        return this._http.get("api/remove/" + id);
+    };
+    HttpService.prototype.postNewImage = function (new_Image) {
         return this._http.post('/api/new', new_Image);
-    }
-    updateImage(updated_image) {
-        return this._http.put(`/api/edit/${updated_image._id}`, updated_image);
-    }
-};
-HttpService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
-];
-HttpService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], HttpService);
+    };
+    HttpService.prototype.updateImage = function (updated_image) {
+        return this._http.put("/api/edit/" + updated_image._id, updated_image);
+    };
+    HttpService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    ]; };
+    HttpService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], HttpService);
+    return HttpService;
+}());
 
 
 
@@ -1325,17 +1350,17 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InnerDisplayComponent", function() { return InnerDisplayComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 
 
 
-let InnerDisplayComponent = class InnerDisplayComponent {
-    constructor(_httpService) {
+var InnerDisplayComponent = /** @class */ (function () {
+    function InnerDisplayComponent(_httpService) {
         this._httpService = _httpService;
     }
     //ctx.fillRect(x, y, width, height);
-    ngOnInit() {
+    InnerDisplayComponent.prototype.ngOnInit = function () {
         this.ctx = this.canvas.nativeElement.getContext('2d');
         this.image = { type: "image", keyword: "placeholder", image_elements: [] };
         this.clientX = 0;
@@ -1346,11 +1371,11 @@ let InnerDisplayComponent = class InnerDisplayComponent {
         this.drawHistory = []; //of the form [[x1,y1], [x2,y2], ...etc]
         //element
         //{}
-    }
-    distanceFormula(x1, y1, x2, y2) {
+    };
+    InnerDisplayComponent.prototype.distanceFormula = function (x1, y1, x2, y2) {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
-    displayDrag(ev) {
+    };
+    InnerDisplayComponent.prototype.displayDrag = function (ev) {
         if (this.selected == true) {
             if (this.mode == "circle") {
                 this.ctx.clearRect(0, 0, 600, 300);
@@ -1372,20 +1397,20 @@ let InnerDisplayComponent = class InnerDisplayComponent {
                 //do nothing to draw point.
             }
         }
-    }
-    pointMode() {
+    };
+    InnerDisplayComponent.prototype.pointMode = function () {
         this.selected = false;
         this.mode = "point";
-    }
-    circleMode() {
+    };
+    InnerDisplayComponent.prototype.circleMode = function () {
         this.selected = false;
         this.mode = "circle";
-    }
-    lineMode() {
+    };
+    InnerDisplayComponent.prototype.lineMode = function () {
         this.selected = false;
         this.mode = "line";
-    }
-    drawItem(ev) {
+    };
+    InnerDisplayComponent.prototype.drawItem = function (ev) {
         console.log(this.mode);
         if (this.mode == "circle") {
             this.drawCircle(ev);
@@ -1396,8 +1421,8 @@ let InnerDisplayComponent = class InnerDisplayComponent {
         else { //default point
             this.drawPoint(ev);
         }
-    }
-    drawPoint(ev) {
+    };
+    InnerDisplayComponent.prototype.drawPoint = function (ev) {
         this.ctx.beginPath();
         this.ctx.fillStyle = 'red';
         this.ctx.arc(ev.clientX - 10, ev.clientY - 81, 3, 0, 2 * Math.PI); //not sure why we need an offset(-10,-81) but oh well
@@ -1407,8 +1432,8 @@ let InnerDisplayComponent = class InnerDisplayComponent {
             color: "black",
             point_coordinate: [ev.clientX - 10, ev.clientY - 81]
         });
-    }
-    drawCircle(ev) {
+    };
+    InnerDisplayComponent.prototype.drawCircle = function (ev) {
         if (this.selected == true) {
             this.selected = false;
             var radius = this.distanceFormula(this.selectedCoor[0], this.selectedCoor[1], ev.clientX - 10, ev.clientY - 81);
@@ -1428,8 +1453,8 @@ let InnerDisplayComponent = class InnerDisplayComponent {
             this.selected = true;
             this.selectedCoor = [ev.clientX - 10, ev.clientY - 81];
         }
-    }
-    drawLine(ev) {
+    };
+    InnerDisplayComponent.prototype.drawLine = function (ev) {
         if (this.selected == true) {
             this.selected = false;
             this.ctx.beginPath();
@@ -1448,8 +1473,8 @@ let InnerDisplayComponent = class InnerDisplayComponent {
             this.selectedCoor = [ev.clientX - 10, ev.clientY - 81];
         }
         this.ctx.beginPath();
-    }
-    drawFromHistory() {
+    };
+    InnerDisplayComponent.prototype.drawFromHistory = function () {
         var current_element;
         for (var i = 0; i < this.drawHistory.length; i++) {
             current_element = this.drawHistory[i];
@@ -1471,33 +1496,34 @@ let InnerDisplayComponent = class InnerDisplayComponent {
                 this.ctx.stroke();
             }
         }
-    }
-    undoLast() {
+    };
+    InnerDisplayComponent.prototype.undoLast = function () {
         this.drawHistory.pop();
         this.ctx.clearRect(0, 0, 600, 300);
         this.drawFromHistory();
-    }
-    saveImage() {
+    };
+    InnerDisplayComponent.prototype.saveImage = function () {
         this.image = { type: "image", keyword: "placeholder", image_elements: this.drawHistory };
         console.log(this.image);
-        this._httpService.postNewImage(this.image).subscribe(data => {
+        this._httpService.postNewImage(this.image).subscribe(function (data) {
             console.log(data);
         });
-    }
-};
-InnerDisplayComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
-], InnerDisplayComponent.prototype, "canvas", void 0);
-InnerDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-inner-display',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./inner-display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/inner-display/inner-display.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./inner-display.component.css */ "./src/app/inner-display/inner-display.component.css")).default]
-    })
-], InnerDisplayComponent);
+    };
+    InnerDisplayComponent.ctorParameters = function () { return [
+        { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('canvas', { static: true })
+    ], InnerDisplayComponent.prototype, "canvas", void 0);
+    InnerDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-inner-display',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./inner-display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/inner-display/inner-display.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./inner-display.component.css */ "./src/app/inner-display/inner-display.component.css")).default]
+        })
+    ], InnerDisplayComponent);
+    return InnerDisplayComponent;
+}());
 
 
 
@@ -1527,21 +1553,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewImageComponent", function() { return NewImageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-let NewImageComponent = class NewImageComponent {
-    constructor() { }
-    ngOnInit() {
+var NewImageComponent = /** @class */ (function () {
+    function NewImageComponent() {
     }
-};
-NewImageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-new-image',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./new-image.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/new-image/new-image.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./new-image.component.css */ "./src/app/new-image/new-image.component.css")).default]
-    })
-], NewImageComponent);
+    NewImageComponent.prototype.ngOnInit = function () {
+    };
+    NewImageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-new-image',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./new-image.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/new-image/new-image.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./new-image.component.css */ "./src/app/new-image/new-image.component.css")).default]
+        })
+    ], NewImageComponent);
+    return NewImageComponent;
+}());
 
 
 
@@ -1571,21 +1599,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageNotFoundComponent", function() { return PageNotFoundComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-let PageNotFoundComponent = class PageNotFoundComponent {
-    constructor() { }
-    ngOnInit() {
+var PageNotFoundComponent = /** @class */ (function () {
+    function PageNotFoundComponent() {
     }
-};
-PageNotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-page-not-found',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./page-not-found.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/page-not-found/page-not-found.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./page-not-found.component.css */ "./src/app/page-not-found/page-not-found.component.css")).default]
-    })
-], PageNotFoundComponent);
+    PageNotFoundComponent.prototype.ngOnInit = function () {
+    };
+    PageNotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-page-not-found',
+            template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./page-not-found.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/page-not-found/page-not-found.component.html")).default,
+            styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./page-not-found.component.css */ "./src/app/page-not-found/page-not-found.component.css")).default]
+        })
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
+}());
 
 
 
@@ -1606,7 +1636,7 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const environment = {
+var environment = {
     Imageion: false
 };
 /*
@@ -1631,8 +1661,8 @@ const environment = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
@@ -1644,7 +1674,7 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].Imagei
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
-    .catch(err => console.error(err));
+    .catch(function (err) { return console.error(err); });
 
 
 /***/ }),
