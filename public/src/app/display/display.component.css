@@ -1,1 +1,11 @@
 canvas { border-style: solid }
+
+.overflow {
+ overflow-y: scroll;
+ height: 300px;
+ margin-right: 20px;
+}
+
+.btn{
+    margin-left: 10px;
+}

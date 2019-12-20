@@ -3,7 +3,7 @@
       <div class="col-sm">
         <canvas #canvas width="600" height="300"></canvas>
       </div>
-      <div  class="col-sm">
+      <div  class="col-sm overflow">
         <div *ngFor="let Image of AllTheThings">
             <p>Keyword: {{Image.keyword}} Image Id: {{Image._id}}</p>
             <button class="btn btn-info" (click)="displayOneImage(Image._id)">Display</button>
@@ -17,6 +17,7 @@
   <h2>You can enter a keyword to refine your search</h2>
   <form (submit)="displayGroupFromService()">
     <label>Enter Keyword: </label><input name="keyword" [(ngModel)]="keyword">
+    <input class="btn btn-info" type="submit" value="Search">
   </form>  
 
 <h2>You can also make a new Image.</h2> 
