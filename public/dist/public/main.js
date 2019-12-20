@@ -822,7 +822,7 @@ var EditImageComponent = /** @class */ (function () {
                 _this.editedImage = data["results"];
                 //this.keyword = data["results"].keyword;
                 _this.drawHistory = _this.editedImage.image_elements;
-                _this.drawFromHistory(_this.drawHistory);
+                _this.drawFromHistory();
             }
             else if (data['errors']) {
                 for (var key in data['errors']) {
@@ -991,11 +991,6 @@ var EditImageComponent = /** @class */ (function () {
         this.drawHistory.pop();
         this.ctx.clearRect(0, 0, 600, 300);
         this.drawFromHistory();
-    };
-    EditImageComponent.prototype.undoLast = function () {
-        this.drawHistory.pop();
-        this.ctx.clearRect(0, 0, 600, 300);
-        this.drawFromHistory(this.drawHistory);
     };
     EditImageComponent.prototype.updateImageFromService = function () {
         var _this = this;

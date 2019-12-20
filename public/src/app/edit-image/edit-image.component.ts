@@ -54,7 +54,7 @@ export class EditImageComponent implements OnInit {
         this.editedImage = data["results"];
         //this.keyword = data["results"].keyword;
         this.drawHistory = this.editedImage.image_elements;
-        this.drawFromHistory(this.drawHistory);
+        this.drawFromHistory();
       }else if(data['errors']){
         for(var key in data['errors']){
           this.errors.push(data['errors'][key]['message']);
@@ -229,12 +229,6 @@ export class EditImageComponent implements OnInit {
     this.drawHistory.pop();
     this.ctx.clearRect(0, 0, 600, 300);
     this.drawFromHistory();
-  }
-
-  undoLast(){
-    this.drawHistory.pop();
-    this.ctx.clearRect(0, 0, 600, 300);
-    this.drawFromHistory(this.drawHistory);
   }
 
   updateImageFromService(){
